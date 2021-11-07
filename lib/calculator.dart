@@ -25,7 +25,7 @@ class _CalculatorState extends State<Calculator> {
       child: ElevatedButton(
           child: Text(
             buttonText,
-            style: const TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 30),
           ),
           onPressed: () {
             main_calculation(buttonText);
@@ -34,7 +34,7 @@ class _CalculatorState extends State<Calculator> {
             shape: const CircleBorder(),
             primary: color,
             onPrimary: textcolor,
-            minimumSize: const Size(100, 100),
+            minimumSize: const Size(80, 50),
             alignment: Alignment.center,
             visualDensity: VisualDensity.standard,
           )),
@@ -48,10 +48,10 @@ class _CalculatorState extends State<Calculator> {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: Container(
-        margin: const EdgeInsets.only(bottom: 20.0),
-        padding: const EdgeInsets.all(6.0),
+        // margin: const EdgeInsets.only(bottom: 10.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Row(
               children: [
@@ -66,16 +66,16 @@ class _CalculatorState extends State<Calculator> {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                btn('AC', kButtonGrayType, kButtonTextColor0), // AARRGGBB
+                btn('C', kButtonGrayType, kButtonTextColor0), // AARRGGBB
                 btn('+/-', kButtonGrayType, kButtonTextColor0),
                 btn('%', kButtonGrayType, kButtonTextColor0),
                 btn("\u00F7", kButtonOrangeType, kButtonTextColor1),
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 btn('7', kButtonBlackType, kButtonTextColor1),
                 btn('8', kButtonBlackType, kButtonTextColor1),
@@ -84,7 +84,7 @@ class _CalculatorState extends State<Calculator> {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 btn('4', kButtonBlackType, kButtonTextColor1),
                 btn('5', kButtonBlackType, kButtonTextColor1),
@@ -93,7 +93,7 @@ class _CalculatorState extends State<Calculator> {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 btn('1', kButtonBlackType, kButtonTextColor1),
                 btn('2', kButtonBlackType, kButtonTextColor1),
@@ -102,7 +102,7 @@ class _CalculatorState extends State<Calculator> {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 btn('0', kButtonBlackType, kButtonTextColor1),
                 btn('00', kButtonBlackType, kButtonTextColor1),
